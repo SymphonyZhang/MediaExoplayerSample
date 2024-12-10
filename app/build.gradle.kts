@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "com.symphony.mediaexoplayersample"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.symphony.mediaexoplayersample"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -26,6 +26,8 @@ android {
             )
         }
     }
+
+    // 2. 确保Java8的支持
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -45,4 +47,10 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    // 1. 导入 Exoplayer 依赖
+    // Exoplayer
+    implementation(libs.media3.exoplayer)
+    implementation(libs.media3.exoplayer.dash)
+    implementation(libs.media3.ui)
 }
