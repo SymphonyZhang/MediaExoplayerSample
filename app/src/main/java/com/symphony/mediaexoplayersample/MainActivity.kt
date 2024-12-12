@@ -43,7 +43,8 @@ class MainActivity : AppCompatActivity() {
                         Log.i(TAG, "onPlaybackStateChanged: 完毕!!!")
                     }
                     Player.STATE_IDLE -> {
-                        Log.i(TAG, "onPlaybackStateChanged: 空闲中~~")
+                        //初始状态，即播放器 以及停止播放的时间玩家只会拥有有限的资源 状态
+                        Log.i(TAG, "onPlaybackStateChanged: 初始状态中~~")
                     }
                 }
 
